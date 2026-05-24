@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const User = require("../models/User"); // Ensure your project path maps to your Mongoose User model schema file
+const User = require("../models/user"); // Ensure your project path maps to your Mongoose User model schema file
 
 /**
  * Express middleware to intercept incoming requests and verify authorization tokens

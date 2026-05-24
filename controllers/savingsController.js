@@ -1,5 +1,5 @@
-const User = require("../models/User");
-const Transaction = require("../models/Transaction");
+const User = require("../models/user");
+const Transaction = require("../models/transaction");
 
 // 💰 1. DEPOSIT OR WITHDRAW MANUALLY FROM SAVINGS WITH LEDGER ENTRIES
 exports.handleManualSavingsTransaction = async (req, res) => {

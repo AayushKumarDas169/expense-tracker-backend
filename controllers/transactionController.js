@@ -1,4 +1,4 @@
-const Transaction = require("../models/Transaction");
+const Transaction = require("../models/transaction");
 const mongoose = require("mongoose");
 const htmlPdf = require("html-pdf-node");
 

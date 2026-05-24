@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 
 dotenv.config();
-connectDB();
 
 const app = express();
 
@@ -16,6 +15,15 @@ app.use(
 );
 
 app.use(express.json());
+
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    res.status(500).json({ error: "Database connection failed in serverless execution context." });
+  }
+});
 
 app.get("/", (req, res) => {
   res.json({ message: "API is running" });
